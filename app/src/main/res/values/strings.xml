@@ -11,14 +11,15 @@
     <string name="key_9">9</string>
     <string name="key_0">0</string>
     <string name="key_dot">.</string>
-    <string name="key_equal">=</string>
+    <string name="key_equal">&#160; = &#160;</string>
     <string name="key_addition">+</string>
-    <string name="subtract">-</string>
-    <string name="multiply">×</string>
-    <string name="key_Square_root">√</string>
+    <string name="key_subtract">-</string>
+    <string name="key_multiply">×</string>
+    <string name="key_square_root">√</string>
     <string name="key_divide">÷</string>
-    <string name="key_plus_minus">+/-</string>
+    <string name="key_parentheses">( )</string>
     <string name="key_ac">AC</string>
-    <string name="default_number">5 + 5 = 10</string>
+    <string name="default_number">0</string>
     <string name="calculator_image">Calculator image</string>
+    <string name="hint">0</string>
 </resources>

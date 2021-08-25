@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="#212121">
 
+
     <EditText
         android:id="@+id/display_text"
         android:layout_width="0dp"
@@ -194,6 +195,7 @@
         android:id="@+id/previous_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="#212121"
         android:text="@string/default_number"
         android:textAlignment="viewEnd"
@@ -201,7 +203,6 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/display_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
