@@ -1,6 +1,7 @@
 package com.example.android.calculatorapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -8,21 +9,36 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android.calculatorapp.storage.ThemeStorage;
+
 import org.mariuszgromada.math.mxparser.Expression;
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView previousCalculation;
     private EditText display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ThemeStorage themeStorage = new ThemeStorage(this);
+
+        setTheme(themeStorage.getAppTheme().getTheme());
+
         setContentView(R.layout.activity_main);
 
         previousCalculation = findViewById(R.id.previous_text);
         display = findViewById(R.id.display_text);
         display.setShowSoftInputOnFocus(false);
+
+
+        findViewById(R.id.settings_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         findViewById(R.id.key_0).setOnClickListener(new View.OnClickListener() {
             @Override
